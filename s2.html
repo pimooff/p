@@ -14,6 +14,21 @@
     <script>
         $(document).ready(function () {
             $('#example').DataTable({
+                "lengthMenu": [
+                    [5, 10, 25, 50, 100],
+                    [5, 10, 25, 50, 100]
+                ],
+                // "dom": "  <'toolbar1'> fltrip",
+                "language": {
+                    "lengthMenu": "Display _MENU_ records per page",
+                    "zeroRecords": "Nothing found - sorry",
+                    "info": "Showing page _PAGE_ of _PAGES_",
+                    "infoEmpty": "No records available",
+                    "infoFiltered": "(filtered from _MAX_ total records)"
+                },
+                "pagingType": "full_numbers",
+                "iDisplayLength": 5,
+                "ajax": 'ss.json'
                 // "paging": false,
                 // "ordering": false,
                 // "info": false
@@ -28,6 +43,15 @@
                 //     }
                 // ]
             });
+            //         $('div.toolbar1').html(`
+            //         <br>
+            //         <div class="row"  id="div-add-project">
+            //         <div class="col-12 col-sm-6">
+            //         <button type="button" id="bt-add-project" class="btn btn-warning" data-toggle="modal" data-target="#modalChooseYear">เพิ่ม</button>
+            //         <button type="button" id="bt-edit-project"  onclick="editProject()" class="btn btn-secondary ml-2" >แก้ไข</button>
+            //         </div> </div>
+            //         <br>
+            // `);
         });
     </script>
 </head>
@@ -35,118 +59,33 @@
 <body>
 
     <h3>Example Table</h3><br>
-    <table id="example" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
-            </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-            </tr>
-            <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009/01/12</td>
-                <td>$86,000</td>
-            </tr>
-            <tr>
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
-                <td>Edinburgh</td>
-                <td>22</td>
-                <td>2012/03/29</td>
-                <td>$433,060</td>
-            </tr>
-            <tr>
-                <td>Bruno Nash</td>
-                <td>Software Engineer</td>
-                <td>London</td>
-                <td>38</td>
-                <td>2011/05/03</td>
-                <td>$163,500</td>
-            </tr>
-            <tr>
-                <td>Sakura Yamamoto</td>
-                <td>Support Engineer</td>
-                <td>Tokyo</td>
-                <td>37</td>
-                <td>2009/08/19</td>
-                <td>$139,575</td>
-            </tr>
-            <tr>
-                <td>Thor Walton</td>
-                <td>Developer</td>
-                <td>New York</td>
-                <td>61</td>
-                <td>2013/08/11</td>
-                <td>$98,540</td>
-            </tr>
-            <tr>
-                <td>Finn Camacho</td>
-                <td>Support Engineer</td>
-                <td>San Francisco</td>
-                <td>47</td>
-                <td>2009/07/07</td>
-                <td>$87,500</td>
-            </tr>
-            <tr>
-                <td>Serge Baldwin</td>
-                <td>Data Coordinator</td>
-                <td>Singapore</td>
-                <td>64</td>
-                <td>2012/04/09</td>
-                <td>$138,575</td>
-            </tr>
-            <tr>
-                <td>Zenaida Frank</td>
-                <td>Software Engineer</td>
-                <td>New York</td>
-                <td>63</td>
-                <td>2010/01/04</td>
-                <td>$125,250</td>
-            </tr>
-            <tr>
-                <td>Zorita Serrano</td>
-                <td>Software Engineer</td>
-                <td>San Francisco</td>
-                <td>56</td>
-                <td>2012/06/01</td>
-                <td>$115,000</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </tfoot>
-    </table>
+    <div class="col-12">
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 </body>
 
 </html>
