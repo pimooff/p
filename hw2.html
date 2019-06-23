@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>หน้า form</title>
+</head>
+
+<body>
+
+    <form action="http://google.com" method="GET">
+        <!-- Personal info -->
+        <h3>Personal info</h3>
+        First name:<br>
+        <input type="text" name="firstname" >
+        <br><br>
+        Last name:<br>
+        <input type="text" name="lastname" >
+        <br><br>
+
+        <!-- Select menu -->
+        Job role<br>
+        <select class="form-control" id="role" name="user_role">
+            <option value="frontend_developer">Front end developer</option>
+            <option value="backend_developer">Back end developer</option>
+            <option value="mobile_developer">Mobile end developer</option>
+        </select>
+        <!-- end select menu -->
+        <br><br>
+
+        <!-- Input: password -->
+        Password<br>
+        <input class="form-control" type="password" id="password" name="user_password">
+
+        <!-- end input: password -->
+        <!-- The <hr> element is used to break up sections -->
+        <hr>
+
+        <!-- Reset button - clears form -->
+        <button class="btn btn-secondary" type="reset">Reset</button>
+        <!-- Submit button - submits form to server -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
