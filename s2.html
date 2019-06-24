@@ -18,32 +18,34 @@
                     [5, 10, 25, 50, 100],
                     [5, 10, 25, 50, 100]
                 ],
-                // "dom": "  <'toolbar1'> fltrip",
-                "language": {
-                    "lengthMenu": "Display _MENU_ records per page",
-                    "zeroRecords": "Nothing found - sorry",
-                    "info": "Showing page _PAGE_ of _PAGES_",
-                    "infoEmpty": "No records available",
-                    "infoFiltered": "(filtered from _MAX_ total records)"
-                },
+               // "dom": "< fptril",
+                "dom": '<"btall"><"fors"f>ltrip',
+                // "dom": "fltrip",
+                // "language": {
+                //     "lengthMenu": "Display _MENU_ records per page",
+                //     "zeroRecords": "Nothing found - sorry",
+                //     "info": "Showing page _PAGE_ of _PAGES_",
+                //     "infoEmpty": "No records available",
+                //     "infoFiltered": "(filtered from _MAX_ total records)"
+                // },
                 "pagingType": "full_numbers",
                 "iDisplayLength": 5,
-                "ajax": 'ss.json'
-                // "paging": false,
-                // "ordering": false,
-                // "info": false
-                // "columnDefs": [{
-                //         "targets": [2],
-                //         "visible": false,
-                //         "searchable": false
-                //     },
-                //     {
-                //         "targets": [3],
-                //         "visible": false
-                //     }
-                // ]
+                "ajax": 'ss.json',
+                "paging": false,
+                "ordering": false,
+                "info": false,
+                "columnDefs": [{
+                        "targets": [2],
+                        "visible": false,
+                        "searchable": false
+                    },
+                    {
+                        "targets": [3],
+                        "visible": false
+                    }
+                ]
             });
-            //         $('div.toolbar1').html(`
+            //         $('div.btall').html(`
             //         <br>
             //         <div class="row"  id="div-add-project">
             //         <div class="col-12 col-sm-6">
@@ -60,6 +62,8 @@
 
     <h3>Example Table</h3><br>
     <div class="col-12">
+            <button type="button" id="bt-add-project" class="btn btn-warning" data-toggle="modal" data-target="#modalChooseYear">เพิ่ม</button>
+            <button type="button" id="bt-edit-project"  onclick="editProject()" class="btn btn-secondary ml-2" >แก้ไข</button>
         <table id="example" class="display" style="width:100%">
             <thead>
                 <tr>
